@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="Zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>《Re:BIRTH》永生花藝 - Custom</title>
+    <link rel="icon" href="./images/favicon.ico" />
+    <!-- 側欄購物車bootstrap@5.3.0 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="./favicon.ico">
+    <!-- form -->
+    <link rel="stylesheet" href="./CSS/form.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css"
+    />
+
+         <!-- Index aos -->
+         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+         <!-- my css -->
+    <link rel="stylesheet" href="./CSS/style2.css" />
+
+  </head>
+
+  <body>
+    <header id="topbar">
+      <nav class="header">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="./images/icon.svg" alt="《Re：BIRTH》永生花藝" />
+          </a>
+        </h1>
+        <ul class="header_menu">
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="custom.html">Custom</a></li>
+          <li><a href="cases.html">Cases</a></li>
+          <li><a href="faq.html">F&Q</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="rwd_right">
+          <ul class="header_icon">
+              <li class="list_item">
+                  <a href="#" class="icon_search"></a>
+              </li>
+              <li class="list_item">
+                  <a class="icon_cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                      aria-controls="offcanvasExample">
+                  </a>
+              </li>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+                  aria-labelledby="offcanvasExampleLabel">
+                  <div class="offcanvas-header" style="background-color: #FFFCF5;">
+                      <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                          aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body" style="background-color: #FFFCF5;">
+                      <div>
+                          購物車內沒有商品
+                      </div>
+                      <div class="d-flex justify-content-center align-items-end mt-3" style="height: 82vh;">
+                          <button class="cartbtn btn-secondary" type="button" data-bs-toggle="dropdown">
+                              立即結帳
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <li class="list_item">
+                  <a href="#" onclick="customizeWindowEvent()" class="icon_sign_in"></a>
+              </li>
+          </ul>               
+           <!-- RWD列表 -->
+          <div id="myNav" class="overlay">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <div class="overlay-content">
+                  <a href="about.html">About</a>
+                  <a href="shop.html">Shop</a>
+                  <a href="custom.html">Custom</a>
+                  <a href="cases.html">Cases</a>
+                  <a href="faq.html">F&Q</a>
+                  <a href="contact.html">Contact</a>
+              </div>
+          </div>
+          <span class="openbtn" onclick="openNav()"></span>
+      </div>
+      </nav>
+
+    <!-- 登入 -->
+    <div id="window-container" style="display: none;">
+      <div class="window-content">
+          <div class="login-page">
+              <div class="form">
+                  <form class="register-form">
+                      <div class="close-button" onclick="closeForm()">×</div> <!-- 關閉按鈕 -->
+                      <h5>註冊會員</h5>
+                      <label>E-mail</label>
+                      <input type="text" placeholder="xxx@mail.com" />
+                      <label>連絡電話</label>
+                      <input type="tel" placeholder="09xx-xxx-xxx" />
+                      <label>密碼</label>
+                      <input type="password" placeholder="6-8位英數密碼" />
+                      <label>再次輸入密碼</label>
+                      <input type="password" placeholder="請再次輸入密碼" />
+                      <button>註冊</button>
+                      <p class="message"><a href="#">登入</a></p>
+                  </form>
+                  <form class="login-form">
+                      <div class="close-button" onclick="closeForm()">×</div> <!-- 關閉按鈕 -->
+                      <h5>會員登入</h5>
+                      <label>E-Mail / 電話</label>
+                      <input type="text" placeholder="請輸入E-Mail或電話" />
+                      <label>密碼</label>
+                      <input type="password" placeholder="請輸入密碼" />
+                      <button>登入</button>
+                      <p class="message">尚未加入會員? <a href="#">註冊</a></p>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+
+        <!--   登入結束 -->    
+      </header>
+    <main>
+      <!-- 按鈕區 -->
+      <section id="Custom">
+        <h2>
+          <span class="en_title">Custom Section<span class="ch_title"> / 客製專區</span>
+      </h2>
+        <!-- <h2>Custom Section <span class="ch_title">/ 客製專區</span></h2> -->
+        <ul class="icon">
+          <li>
+            <a href="#steps" class="custom_delivery"></a>
+          </li>
+          <li>
+            <a href="#custom_full" class="custom_full"></a>
+          </li>
+          <li>
+            <a href="#custom_half" class="custom_half"></a>
+          </li>
+        </ul>
+
+        <div class="Custom_banner">
+          <img src="./images/custom_banner.svg" alt="" />
+        </div>
+      </section>
+
+      <!-- 說明步驟區 -->
+      <div id="steps">
+        <div class="steps">
+          <figure class="custom_steps">
+            <img src="./images/custom_steps.svg" alt="" />
+          </figure>
+
+          <figure class="custom_flower_delivery">
+            <img src="./images/Flower_Delivery.svg" alt="" />
+          </figure>
+
+          <figure class="custom_Img_right">
+            <img data-aos="fade-up" data-aos-duration="1000" src="./images/custom_Img_right.jpg" alt=""> 
+          </figure>
+
+          <figure class="custom_Img_left">
+            <img data-aos="fade-up" data-aos-duration="1000" src="./images/custom_Img_left.jpg" alt=""> 
+          </figure>
+
+          <a href="shop.html">Shop Now</a>
+        </div>
+      </div>
+
+      <!-- 全客製化區 -->
+      <div class="link-top"></div>
+
+      <div id="custom_full">
+        <div class="custom_full">
+          <h5>全客製化</h5>
+        </div>
+        <div class="custom_full_1">
+          <p>製作您的專屬花禮</p>
+        </div>
+        <div class="custom_section_full">
+          <!-- form表格區 -->
+          <form id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+              <li class="active">基本資料</li>
+              <li class="active_2">客製需求</li>
+              <li class="active_3">送出訂單</li>
+            </ul>
+
+            <!-- fieldsets -->
+            <fieldset class="step1">
+
+              <h3 class="fs-subtitle"></h3>
+              <h3 class="fs-subtitle">*訂購者姓名</h3>
+              <input
+                class="keyin"
+                type="text"
+                name="訂購者姓名"
+                placeholder="請輸入訂購者姓名"
+              />
+              <h3 class="fs-subtitle">*行動電話</h3>
+              <input
+                class="keyin"
+                type="tel"
+                name="行動電話"
+                placeholder="09XX-XXX-XXX"
+              />
+              <h3 class="fs-subtitle">E-mail</h3>
+              <input
+                class="keyin"
+                type="email"
+                name="E-mail"
+                placeholder="xxx@mail.com"
+              />
+              <h3 class="fs-subtitle">*送達日期</h3>
+              <input
+                class="keyin"
+                type="date"
+                name="送達日期"
+                placeholder="DD-MM-YYYY"
+              />
+              <br />
+              <input
+                type="button"
+                name="next"
+                class="next action-button"
+                value="下一步"
+              />
+            </fieldset>
+            <fieldset class="step2">
+              <h2 class="fs-title">｜客製需求｜</h2>
+              <div class="purpose">
+                <h4 class="fs-subtitle">*訂購用途</h4>
+                <input type="radio" name="p1" />婚禮，含捧花、胸花
+                <input type="radio" name="p1"/>特殊節日，如母親節、父親節<br />
+                <input type="radio" name="p1" />向心儀對象傳遞心意
+                <input type="radio" name="p1" />生日慶祝
+                <input type="radio" name="p1" />表達慰問與關懷<br />
+                <input type="radio" name="p1"/>居家裝飾、辦公桌小盆栽等室內美化<br />
+                <h4 class="fs-subtitle">*款式選擇</h4>
+                <input
+                  type="radio"
+                  name="size"
+                />25cm花束（NT$1,000-NT$1,800)<br />
+                <input
+                  type="radio"
+                  name="size"
+                />45cm花束（NT$2,300-NT$3,500)<br />
+                <input
+                  type="radio"
+                  name="size"
+                />55cm花束（NT$4,000-NT$5,500)<br />
+                <input
+                  type="radio"
+                  name="size"
+                />小盆栽，適合放置辦公桌（NT$900-NT$1,500)<br />
+                <input
+                  type="radio"
+                  name="size"
+                />中盆栽，適合作為居家桌櫃擺設（NT$2,500-NT$4,500)<br />
+                <input
+                  type="radio"
+                  name="size"
+                />大盆栽，適合作為居家落地擺設（NT$5,000-NT$7,500)<br />
+              </div>
+
+              <div class="FL">
+                <h4 class="fs-subtitle">*花種選擇</h4>
+                <h4 class="fs-subtitle">
+                  若無想法也可留下心儀顏色或花種，將由專人與您聯繫溝通
+                </h4>
+                <input
+                  class="keyin"
+                  type="text"
+                  name="輸入品項"
+                  class="note"
+                  placeholder="請輸入顏色或花種名稱"
+                /><br />
+                <h4 class="fs-subtitle">*其他需求</h4>
+
+                <input
+                  class="keyin"
+                  class="other"
+                  type="text"
+                  name="輸入品項"
+                  class="note"
+                  placeholder=""
+                /><br />
+              </div>
+
+              <input
+                type="button"
+                name="next"
+                class="next action-button"
+                value="送出表單"
+              />
+            </fieldset>
+            <fieldset class="step3">
+              <img class="checkbox" src="./images/checkbox.svg" alt="" />
+              <h2 class="fs-title">訂單已送出，將有專人與您聯繫</h2>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <div class="link-top"></div>
+
+      <div id="custom_half">
+        <div class="custom_section_half">
+          <div class="custom_full">
+            <h5>半客製化</h5>
+          </div>
+          <div class="custom_full_1">
+            <p>線上預覽配色功能</p>
+          </div>
+
+          <div class="custom_selector">
+            <p>可選款式</p>
+            <div class="custom_block">
+              <article>
+                <img class="custom_block_1" src="./images/FL6_BG.jpg" alt="" />
+                <h3>Spring Fling</h3>
+                <h4>-春日之舞-</h4>
+              </article>
+              <article>
+                <img class="custom_block_2" src="./images/FL3.jpg" alt="" />
+                <h3>Morning Dew</h3>
+                <h4>-晨露-</h4>
+              </article>
+              <article>
+                <img class="custom_block_3" src="./images/FL22.jpg" alt="" />
+                <h3>Garden of Dreams</h3>
+                <h4>-夢幻花園-</h4>
+              </article>
+            </div>
+            <article class="custom_selector_1">
+              <img class="custom_block_4" src="./images/FL6_BG.jpg" alt="" />
+              <p>選擇款式: 春日之舞</p>
+              <p>售價：NT$1,299</p>
+              <p>
+                此款可選花種：<input
+                  type="radio"
+                  name="kind"
+                  value=""
+                  id="white_FL"
+                />白雛菊
+                <input type="radio" name="kind" value="" id="pink_FL" />粉雛菊
+              </p>
+              <p>
+                尺寸：<input
+                  type="radio"
+                  name="size"
+                  id="size"
+                  value=""
+                />大(55CM)
+                <input
+                  type="radio"
+                  name="size"
+                  id="size"
+                  value=""
+                />中(45CM)<input
+                  type="radio"
+                  name="size"
+                  id="size"
+                  value=""
+                />小(25CM)
+              </p>
+              <p>
+                包裝：<input
+                  type="radio"
+                  name="pack"
+                  value="beige"
+                  id="beige"
+                />米色
+                <input type="radio" name="pack" value="white" id="white" />白色
+              </p>
+              <p>
+                加購：<input
+                  type="checkbox"
+                  name="add"
+                  id="add"
+                  value=""
+                />手工小卡(NT$50)
+                <input
+                  type="checkbox"
+                  name="add1"
+                  id="add1"
+                  value=""
+                />精緻包裝提袋、禮盒(NT$100)
+              </p>
+              <p class="counter">
+                數量:
+                <button class="button" onclick="decrement()">-</button>
+                <span id="count">1</span>
+                <button class="button" onclick="increment()">+</button>
+              </p>
+              <div class="button_send_block">
+                <button class="button_send" onclick="send()">加入購物車</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="footer_all">
+            <div class="footer_left">
+                <h1 class="footer_logo">
+                    <a href="index.html">
+                        <img src="./image/icon.svg" alt="《Re：BIRTH》永生花藝">
+                    </a>
+                </h1>
+                <div class="footer_address">
+                    <p>
+                        02-000-0000<br>
+                        台北市花花區玫瑰路一段321號<br>
+                        營業時間：<br>
+                        周一至周六 ：9:00 am 至 18:00 pm<br>
+                        周日公休，詳情見官方粉絲團
+                    </p>
+                </div>
+            </div>
+            <div class="footer_copyright">
+              © 2020 - 2023 Re:BIRTH. All Rights Reserved.<br>
+              本網站為練習作品。此為非正式官方網站，資訊均非正式內容。若網站中有表單填寫，僅此示意，並無任何後台功能，不會對外蒐集個人資料，特此申明。
+      </div>
+            <div class="footer_right">
+              <div class="footer_list">
+                  <ul class="footer_about">
+                      <li class="footer_li_item"><a href="about.html">關於我們</a></li>
+                      <li><a href="about.html#team">花藝團隊</a></li>
+                      <li><a href="about.html#flowerMean">花語介紹</a></li>
+                  </ul>
+                  <ul class="footer_shop">
+                      <li class="footer_li_item"><a href="shop.html">線上商店</a></li>
+                      <li><a href="shop.html#onlineShop">婚禮花束</a></li>
+                      <li><a href="shop.html#onlineShop">贈禮花束</a></li>
+                      <li><a href="shop.html#onlineShop">居家裝飾</a></li>
+                  </ul>
+                  <ul class="footer_custom">
+                      <li class="footer_li_item"><a href="custom.html">客製專區</a></li>
+                      <li><a href="custom.html#steps">代客送花</a></li>
+                      <li><a href="custom.html#custom_full">全客製化</a></li>
+                      <li><a href="custom.html#custom_half">半客製化</a></li>
+                  </ul>
+                  <ul class="footer_faq">
+                      <li class="footer_li_item"><a href="faq.html">常見問題</a></li>
+                      <li><a href="faq.html#faq_q1">何為永生花</a></li>
+                      <li><a href="faq.html#faq_q2">運送包裝</a></li>
+                      <li><a href="faq.html#faq_q3">運費服務</a></li>
+                      <li><a href="faq.html#faq_q4">售後服務</a></li>
+                      <li><a href="faq.html#faq_q5">後續保養</a></li>
+                  </ul>
+                  <ul class="footer_cases">
+                      <li class="footer_li_item"><a href="cases.html">客戶案例</a></li>
+                      <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                      <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                      <li><a href="cases.html#case_in">居家類別</a></li>
+                  </ul>
+                  <ul class="footer_contact">
+                      <li class="footer_li_item"><a href="contact.html">聯絡我們</a></li>
+                      <li><a href="contact.html#traffic_info">店鋪資訊</a></li>
+                      <li><a href="contact.html#content_info">聯絡表單</a></li>
+                  </ul>
+              </div>
+              <!-- RWD -->
+              <div class="rwd_footer_list">
+                  <button class="accordion">關於我們</button>
+                  <ul class="footer_panel about">
+                      <li><a href="about.html#team">花藝團隊</a></li>
+                      <li><a href="about.html#flowerMean">花語介紹</a></li>
+                  </ul>
+
+                  <button class="accordion">線上商店</button>
+                  <ul class="footer_panel shop">
+                      <li><a href="shop.html#onlineShop">婚禮花束</a></li>
+                      <li><a href="shop.html#onlineShop">贈禮花束</a></li>
+                      <li><a href="shop.html#onlineShop">居家裝飾</a></li>
+                  </ul>
+
+                  <button class="accordion">客製服務</button>
+                  <ul class="footer_panel custom">
+                      <li><a href="custom.html#steps">代客送花</a></li>
+                      <li><a href="custom.html#custom_full">全客製化</a></li>
+                      <li><a href="custom.html#custom_half">半客製化</a></li>
+                  </ul>
+
+                  <button class="accordion">常見問題</button>
+                  <ul class="footer_panel custom">
+                      <li><a href="faq.html#faq_q1">何為永生花</a></li>
+                      <li><a href="faq.html#faq_q2">運送包裝</a></li>
+                      <li><a href="faq.html#faq_q3">運費服務</a></li>
+                      <li><a href="faq.html#faq_q4">售後服務</a></li>
+                      <li><a href="faq.html#faq_q5">後續保養</a></li>
+                  </ul>
+
+                  <button class="accordion">客戶案例</button>
+                  <ul class="footer_panel custom">
+                      <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                      <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                      <li><a href="cases.html#case_in">居家類別</a></li>
+                  </ul>
+                  <button class="accordion">聯絡我們</button>
+                  <ul class="footer_panel about">
+                      <li><a href="contact.html#traffic_info">店鋪資訊</a></li>
+                      <li><a href="contact.html#content_info">聯絡表單</a></li>
+                  </ul>
+              </div>
+
+                <div class="footer_icon">
+                    <ul>
+                        <li class="footer_icon_list">
+                            <a href="#" class="footer_icon_ig"></a>
+                        </li>
+                        <li class="footer_icon_list">
+                            <a href="#" class="footer_icon_line"></a>
+                        </li>
+                        <li class="footer_icon_list">
+                            <a href="#" class="footer_icon_fb"></a>
+                        </li>
+                        <li class="footer_icon_list">
+                            <a href="#" class="footer_icon_email"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-gotop d-inline-flex align-items-center justify-content-center"
+            data-action="gotop">
+        </button>
+    </footer>    
+  </main>
+    <script src="./js/script1.js"></script>
+    <!-- 側欄購物車bootstrap@5.3.0 JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="./JS/form.js"></script>
+    <script src="./JS/change_FL.js"></script>
+    <!-- 數量跳動 -->
+    <script>
+      function increment() {
+        var countElement = document.getElementById("count");
+        var count = parseInt(countElement.innerText);
+        count += 1;
+        countElement.innerText = count;
+      }
+
+      function decrement() {
+        var countElement = document.getElementById("count");
+        var count = parseInt(countElement.innerText);
+        count -= 1;
+        countElement.innerText = count;
+      }
+
+      
+// 彈出式登入
+function customizeWindowEvent() {
+    var popup_window = document.getElementById("window-container");
+
+    popup_window.style.display = "flex";
+
+    window.onclick = function close(e) {
+        if (e.target == popup_window) {
+            popup_window.style.display = "none";
+        }
+    };
+}
+
+$(".message a").click(function () {
+    $("form").animate({ height: "toggle", opacity: "toggle" }, "fast");
+});
+
+// 關閉彈出式登入
+function closeForm() {
+    document.getElementById("window-container").style.display = "none";
+}
+
+    </script>
+    <!-- Aos -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+  </body>
+</html>

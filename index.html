@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow" />
+    <title>《Re:BIRTH》永生花藝</title>
+    <!-- 熱門商品左右切換 -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'>
+    <!-- 側欄購物車bootstrap@5.3.0 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header id="topbar">
+        <nav class="header">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./image/icon.svg" alt="《Re：BIRTH》永生花藝">
+                </a>
+            </h1>
+
+
+            <!-- 普通列表 -->
+            <ul class="header_menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="custom.html">Custom</a></li>
+                <li><a href="cases.html">Cases</a></li>
+                <li><a href="faq.html">F&Q</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- ICON -->
+            <div class="rwd_right">
+                <ul class="header_icon">
+                    <li class="list_item">
+                        <a href="#" class="icon_search"></a>
+                    </li>
+                    <li class="list_item">
+                        <a class="icon_cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                            aria-controls="offcanvasExample">
+                        </a>
+                    </li>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header" style="background-color: #FFFCF5;">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body" style="background-color: #FFFCF5;">
+                            <div>
+                                購物車內沒有商品
+                            </div>
+                            <div class="d-flex justify-content-center align-items-end mt-3" style="height: 82vh;">
+                                <button class="cartbtn btn-secondary" type="button" data-bs-toggle="dropdown">
+                                    立即結帳
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="list_item">
+                        <a href="#" onclick="customizeWindowEvent()" class="icon_sign_in"></a>
+                    </li>
+                </ul>
+
+                <!-- RWD列表 -->
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="about.html">About</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="custom.html">Custom</a>
+                        <a href="cases.html">Cases</a>
+                        <a href="faq.html">F&Q</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <span class="openbtn" onclick="openNav()"></span>
+            </div>
+        </nav>
+        <div id="window-container" style="display: none;">
+            <div class="window-content">
+                <div class="login-page">
+                    <div class="form">
+                        <form class="register-form">
+                            <div class="close-button" onclick="closeForm()">×</div> <!-- 關閉按鈕 -->
+                            <h5>註冊會員</h5>
+                            <label>E-mail</label>
+                            <input type="text" placeholder="xxx@mail.com" />
+                            <label>連絡電話</label>
+                            <input type="tel" placeholder="09xx-xxx-xxx" />
+                            <label>密碼</label>
+                            <input type="password" placeholder="6-8位英數密碼" />
+                            <label>再次輸入密碼</label>
+                            <input type="password" placeholder="請再次輸入密碼" />
+                            <button>註冊</button>
+                            <p class="message"><a href="#">登入</a></p>
+                        </form>
+                        <form class="login-form">
+                            <div class="close-button" onclick="closeForm()">×</div> <!-- 關閉按鈕 -->
+                            <h5>會員登入</h5>
+                            <label>E-Mail / 電話</label>
+                            <input type="text" placeholder="請輸入E-Mail或電話" />
+                            <label>密碼</label>
+                            <input type="password" placeholder="請輸入密碼" />
+                            <button>登入</button>
+                            <p class="message">尚未加入會員? <a href="#">註冊</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main>
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content-slider">
+                <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
+                <input type="radio" id="banner2" class="sec-1-input" name="banner">
+                <input type="radio" id="banner3" class="sec-1-input" name="banner">
+                <div class="slider">
+                    <div id="top-banner-1" class="banner">
+                        <div class="banner-inner-wrapper">
+                        </div>
+                        <div class="banner-inner-wrapper-overlay">
+                            <div class="learn-more-button"><a href="shop.html">SHOP NOW > </a></div>
+                        </div>
+                    </div>
+                    <div id="top-banner-2" class="banner">
+                        <div class="banner-inner-wrapper">
+                        </div>
+                        <div class="banner-inner-wrapper-overlay">
+                            <div class="learn-more-button"><a href="shop.html">SHOP NOW > </a></div>
+                        </div>
+                    </div>
+                    <div id="top-banner-3" class="banner">
+                        <div class="banner-inner-wrapper">
+                        </div>
+                        <div class="banner-inner-wrapper-overlay">
+                            <div class="learn-more-button"><a href="shop.html">SHOP NOW > </a></div>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="controls">
+                        <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span>●
+                            Wedding</label>
+                        <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span>●
+                            Gift</label>
+                        <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span>●
+                            Indoor Flower</label>
+
+                    </div>
+                </nav>
+            </div>
+        </section>
+        <!-- 本店特色 -->
+        <div id="feature">
+            <div class="space-holder">
+                <div class="sticky">
+                    <div class="title_feature">
+                        <h2>
+                            <span class="en_title">Our Feature<span class="ch_title"> / 本店特色</span>
+                        </h2>
+                    </div>
+                    <div class="horizontal">
+                        <div role="feed" class="cards">
+                            <div class="list_item_feature block-1">
+                                <h3>Flower<br>　Delivery.</h3>
+                                <span class="feature_text">
+                                    <span class="text_big">代客送花</span><br>
+                                    <span class="text_small">免代送費用</span>
+                                </span>
+                            </div>
+                            <div class="list_item_feature block-2">
+                                <h3>Customized<br>　Services.</h3>
+                                <span class="feature_text">
+                                    <span class="text_big">客製服務</span><br>
+                                    <span class="text_small">線上即時預覽成品</span>
+                                </span>
+                            </div>
+                            <div class="list_item_feature block-3">
+                                <h3>Order<br>　Summary.</h3>
+                                <span class="feature_text">
+                                    <span class="text_big">貼心通知</span><br>
+                                    <span class="text_small">貨物進度透明，到貨拍照通知</span>
+                                </span>
+                            </div>
+                            <div class="list_item_feature block-4">
+                                <h3>After-Sales <br>　Service.</h3>
+                                <span class="feature_text">
+                                    <span class="text_big">售後服務</span><br>
+                                    <span class="text_small">免費修剪、加價換花</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 熱門商品 -->
+        <section id="bestSeller">
+            <div class="title_bestSeller">
+                <h2>
+                    <span class="en_title">Best Seller<span class="ch_title"> / 熱門商品</span>
+                </h2>
+            </div>
+            <div class="bestSeller_tab">
+                    <button class="bestSeller_tablinks" onclick="openCity(event, 'wedding')">婚禮花束</button>
+                    <button id="defaultOpen" class="bestSeller_tablinks gift" onclick="openCity(event, 'gift')">贈禮花束</button>
+                    <button class="bestSeller_tablinks" onclick="openCity(event, 'indoorFlower')">居家裝飾</button>
+            </div>
+            <!-- 商品 -->
+            <div class="list_box_bestseller">
+                <!-- 婚禮 -->
+                <div id="wedding" class="bestseller_tabcontent">
+                    <ul>
+                        <li>
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-wedding-1.jpg" alt="Morning Dew 晨露">
+                                    <figcaption>
+                                        <span class="en_prod_name">Morning Dew</span><br>
+                                        <span class="ch_prod_name">-晨露-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">1,199</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="slider responsive">
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-wedding-2.jpg" alt="Winter Wonderland 冬日仙境">
+                                    <figcaption>
+                                        <span class="en_prod_name">Winter Wonderland</span><br>
+                                        <span class="ch_prod_name">-冬日仙境-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">2,499</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="slider responsive">
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-wedding-3.jpg" alt="Sunny Skies 晴空萬里">
+                                    <figcaption>
+                                        <span class="en_prod_name">Sunny Skies</span><br>
+                                        <span class="ch_prod_name">-晴空萬里-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">2,399</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="slider responsive">
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-wedding-4.jpg" alt="Love of Bluebird 青鳥之戀">
+                                    <figcaption>
+                                        <span class="en_prod_name">Love of Bluebird</span><br>
+                                        <span class="ch_prod_name">-青鳥之戀-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">3,299</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <div class="side_title_wedding">
+                        <img src="./image/P3-font-Wedding.png" alt="熱門商品：婚禮花束">
+                    </div>
+                </div>
+                <!-- 贈禮 -->
+                <div id="gift" class="bestseller_tabcontent">
+                    <ul>
+                        <li>
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-gift-1.jpg" alt="Morning Dew 晨露">
+                                    <figcaption>
+                                        <span class="en_prod_name">Angelic Wings</span><br>
+                                        <span class="ch_prod_name">-天使之翼-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">3,699</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="slider responsive">
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-gift-2.jpg" alt="Winter Wonderland 冬日仙境">
+                                    <figcaption>
+                                        <span class="en_prod_name">Blue Lagoon</span><br>
+                                        <span class="ch_prod_name">-藍色礁湖-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">2,599</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="slider responsive">
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-gift-3.jpg" alt="Sunny Skies 晴空萬里">
+                                    <figcaption>
+                                        <span class="en_prod_name">Blooming Roses</span><br>
+                                        <span class="ch_prod_name">-玫瑰綻放-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">2,899</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="slider responsive">
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-gift-4.jpg" alt="Love of Bluebird 青鳥之戀">
+                                    <figcaption>
+                                        <span class="en_prod_name">Autumn Harvest</span><br>
+                                        <span class="ch_prod_name">-秋日豐收-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">1,399</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="side_title_gift">
+                        <img src="./image/P3-font-Gift.png" alt="熱門商品：婚禮花束">
+                    </div>
+                </div>
+                <!-- 居家 -->
+                <div id="indoorFlower" class="bestseller_tabcontent">
+                    <ul>
+                        <li>
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-indoor-1.jpg" alt="Morning Dew 晨露">
+                                    <figcaption>
+                                        <span class="en_prod_name">Midnight Romance</span><br>
+                                        <span class="ch_prod_name">-午夜戀曲-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">2,099</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="slider responsive">
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-indoor-2.jpg" alt="Winter Wonderland 冬日仙境">
+                                    <figcaption>
+                                        <span class="en_prod_name">Inspiring Springs</span><br>
+                                        <span class="ch_prod_name">-靈感源泉-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">2,599</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="slider responsive">
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-indoor-3.jpg" alt="Sunny Skies 晴空萬里">
+                                    <figcaption>
+                                        <span class="en_prod_name">Timeless Elegance</span><br>
+                                        <span class="ch_prod_name">-時光倩影-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">2,399</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li class="slider responsive">
+                            <a href="products.html">
+                                <figure>
+                                    <img src="./image/P3-Img-indoor-4.jpg" alt="Love of Bluebird 青鳥之戀">
+                                    <figcaption>
+                                        <span class="en_prod_name">Strolling through Time</span><br>
+                                        <span class="ch_prod_name">-時光漫步-</span><br>
+                                        <span class="ch_prod_name2">NT$</span>
+                                        <span class="en_prod_money">1,699</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="side_title_indoor">
+                        <img src="./image/P3-font-Indoor Flower.png" alt="熱門商品：婚禮花束">
+                    </div>
+                </div>
+                <div class="view_all">
+                    <a href="shop.html">　View All　</a>
+                </div>
+            </div>
+        </section>
+        <!-- 送禮指南 -->
+        <section id="giftIdeas">
+            <div class="giftIdeas_bg"></div>
+            <div class="bg_color"></div>
+            <div class="title_giftIdeas">
+                <H2 class="giftIdeas_h2">Gift Ideas</H2>
+                <p class="giftIdeas_p">送禮指南<br>幫助正在挑選禮物的你</p>
+            </div>
+            <div class="list_box_giftIdeas">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                ● Color
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                為了讓您的禮物更具特別的意義，可以選擇與節日相關的花卉作為禮物。花束的色彩和樣式則可以根據節日主題和收禮人的個人品味來選擇，讓您的禮物更具個性和獨特性。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ● Festival
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                選擇與節日相關的花卉作為禮物，可以增添節日氛圍並表達對慶祝活動的祝福。每個節日都有其獨特的花卉和象徵意義，選擇符合節日主題的花束可以讓禮物更具節日氛圍和意義。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                ● Flower Meaning
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                每種花朵都有其獨特的花語和象徵意義。例如，玫瑰花的花語中紅玫瑰代表愛情，藍玫瑰代表神秘等。選擇符合您想要傳達的情感和訊息的花語，可以使禮物更具意義和深度。<br>
+                            </div>
+                            <a class="flower_meaning_link" href="about.html#flowerMean">查看花語</a>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseOne">
+                                ● BestSeller
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                參考當前受歡迎的花束也是不錯的選擇。會依據目前店鋪內的熱銷款式列出熱門花束，選擇熱門商品作為禮物可以確保您的禮物在時尚潮流中保持前衛且受歡迎。
+                            </div>
+                            <a class="flower_meaning_link" href="shop.html">熱門商品</a>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseOne">
+                                ● Custom Design
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                客製化花束將根據您的需求和要求製作。可以選擇花束的花材、顏色、數量以及添加特殊元素。這樣的禮物將更具獨特性和個人化，展現您對收禮人的用心。
+                            </div>
+                            <a class="flower_meaning_link" href="custom.html">立即客製</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!-- 購物流程 -->
+        <section id="process">
+            <div class="title_process">
+                <h2>
+                    <span class="en_title">Shopping Process<span class="ch_title"> / 購物流程</span>
+                </h2>
+            </div>
+            <div class="list_box_process">
+                <figure class="figure_process">
+                    <img src="./image/P5-Img-cash.svg" alt="下單付款">
+                    <figcaption class="figcaption_process">
+                        <span>下單付款</span><br>
+                        <span>本店花禮皆為接單訂製，須於付款完成後才會進行製作</span>
+                    </figcaption>
+                </figure>
+                <figure class="figure_process">
+                    <img src="./image/P5-Img-time.svg" alt="製作時程">
+                    <figcaption class="figcaption_process">
+                        <span>製作時程</span><br>
+                        <span>一般商品製作時間5-7天，客製商品製作則需7-10天</span>
+                    </figcaption>
+                </figure>
+                <figure class="figure_process">
+                    <img src="./image/P5-Img-car.svg" alt="包裝出貨">
+                    <figcaption class="figcaption_process">
+                        <span>包裝出貨</span><br>
+                        <span>可選擇宅配、自取、代客送花等方式，全館商品免運費</span>
+                    </figcaption>
+                </figure>
+                <figure class="figure_process">
+                    <img src="./image/P5-Img-mes.svg" alt="送達通知">
+                    <figcaption class="figcaption_process">
+                        <span>送達通知</span><br>
+                        <span>代客送花將於送貨成功時拍照告知，為您追蹤心意進度</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <!-- 客戶案例 -->
+        <section id="cases">
+            <div class="title_cases">
+                <h2>
+                    <span class="en_title">Cases<span class="ch_title"> / 客戶案例</span>
+                </h2>
+            </div>
+            <!-- <div class="list_box_cases"> -->
+            <div class="slider_main">
+                <div class="slider slider-nav">
+                    <figure>
+                        <img src="./image/P5-Img-cases-1.jpg" alt="客戶案例：Glorious Night瑰麗之夜">
+                        <figcaption>
+                            <span>Glorious Night瑰麗之夜</span>
+                            <span>Size：28cm</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./image/P5-Img-cases-2.jpg" alt="客戶案例：Rose Garden玫瑰園">
+                        <figcaption>
+                            <span>Rose Garden玫瑰園</span>
+                            <span>Size：35cm</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./image/P5-Img-cases-3.jpg" alt="客戶案例：Ocean Breeze海風拂面">
+                        <figcaption>
+                            <span>Ocean Breeze海風拂面</span>
+                            <span>Size：35cm</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./image/P5-Img-cases-4.jpg" alt="客戶案例：Sweet Fragrance香甜芬芳">
+                        <figcaption>
+                            <span>Sweet Fragrance香甜芬芳</span>
+                            <span>Size：25cm</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="more_cases">
+                <a href="cases.html">　More　</a>
+            </div>
+        </section>
+        <!-- 聯絡我們 -->
+        <section id="getInTouch">
+            <div class="bg_color"></div>
+            <div class="getInTouch_form">
+                <div class="title_getInTouch">
+                    <h2 class="getInTouch_h2">　Get In Touch　</h2>
+                    <p class="getInTouch_p">有任何問題，請聯繫我們</p>
+                    <div class="getInTouch_form_list">
+                        <form name="member_mod_form" id="member_mod_form">
+                            <label class="label_name" for="username">姓名</label>
+                            <input type="text" name="username" id="username" title="請輸入聯絡者姓名" placeholder="請輸入聯絡者姓名"
+                                required autocomplete="on">
+                            <label class="label_tel" for="tel">行動電話</label>
+                            <input class="input_tel" type="tel" name="tel" id="tel" title="請輸入電話"
+                                placeholder="09xx-xxx-xxx" required autocomplete="on" maxlength="12"
+                                oninput="formatPhoneNumber(this)">
+                            <label class="label_email" for="email">E-Mail</label>
+                            <input class="input_email" type="email" name="email" id="email" title="請輸入Email"
+                                placeholder="xxx@mail.com">
+                            <label class="label_msg" for="message">問題及建議</label>
+                            <textarea class="textarea_msg" name="message" id="message" cols="30" rows="10"
+                                title="請輸入內容"></textarea>
+                            <p>
+                                <input class="input_send" type="submit" value="送出">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container_map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2149.3457890568952!2d121.55920465282975!3d25.04240968097686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abbf23ce4b3b%3A0xc82b0f87ff7df9dc!2z5p2-5bGx5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1686292783348!5m2!1szh-TW!2stw"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer_all">
+                <div class="footer_left">
+                    <h1 class="footer_logo">
+                        <a href="index.html">
+                            <img src="./image/icon.svg" alt="《Re：BIRTH》永生花藝">
+                        </a>
+                    </h1>
+                    <div class="footer_address">
+                        <p>
+                            02-000-0000<br>
+                            台北市花花區玫瑰路一段321號<br>
+                            營業時間：<br>
+                            周一至周六 ：9:00 am 至 18:00 pm<br>
+                            周日公休，詳情見官方粉絲團
+                        </p>
+                    </div>
+                </div>
+                <div class="footer_copyright">
+                    © 2020 - 2023 Re:BIRTH. All Rights Reserved.<br>
+                    本網站為練習作品。此為非正式官方網站，資訊均非正式內容。若網站中有表單填寫，僅此示意，並無任何後台功能，不會對外蒐集個人資料，特此申明。
+                </div>
+                <div class="footer_right">
+                    <div class="footer_list">
+                        <ul class="footer_about">
+                            <li class="footer_li_item"><a href="about.html">關於我們</a></li>
+                            <li><a href="about.html#team">花藝團隊</a></li>
+                            <li><a href="about.html#flowerMean">花語介紹</a></li>
+                        </ul>
+                        <ul class="footer_shop">
+                            <li class="footer_li_item"><a href="shop.html">線上商店</a></li>
+                            <li><a href="shop.html#onlineShop">婚禮花束</a></li>
+                            <li><a href="shop.html#onlineShop">贈禮花束</a></li>
+                            <li><a href="shop.html#onlineShop">居家裝飾</a></li>
+                        </ul>
+                        <ul class="footer_custom">
+                            <li class="footer_li_item"><a href="custom.html">客製專區</a></li>
+                            <li><a href="custom.html#steps">代客送花</a></li>
+                            <li><a href="custom.html#custom_full">全客製化</a></li>
+                            <li><a href="custom.html#custom_half">半客製化</a></li>
+                        </ul>
+                        <ul class="footer_faq">
+                            <li class="footer_li_item"><a href="faq.html">常見問題</a></li>
+                            <li><a href="faq.html#faq_q1">何為永生花</a></li>
+                            <li><a href="faq.html#faq_q2">運送包裝</a></li>
+                            <li><a href="faq.html#faq_q3">運費服務</a></li>
+                            <li><a href="faq.html#faq_q4">售後服務</a></li>
+                            <li><a href="faq.html#faq_q5">後續保養</a></li>
+                        </ul>
+                        <ul class="footer_cases">
+                            <li class="footer_li_item"><a href="cases.html">客戶案例</a></li>
+                            <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                            <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                            <li><a href="cases.html#case_in">居家類別</a></li>
+                        </ul>
+                        <ul class="footer_contact">
+                            <li class="footer_li_item"><a href="contact.html">聯絡我們</a></li>
+                            <li><a href="contact.html#traffic_info">店鋪資訊</a></li>
+                            <li><a href="contact.html#content_info">聯絡表單</a></li>
+                        </ul>
+                    </div>
+                    <!-- RWD -->
+                    <div class="rwd_footer_list">
+                        <button class="accordion">關於我們</button>
+                        <ul class="footer_panel about">
+                            <li><a href="about.html#team">花藝團隊</a></li>
+                            <li><a href="about.html#flowerMean">花語介紹</a></li>
+                        </ul>
+
+                        <button class="accordion">線上商店</button>
+                        <ul class="footer_panel shop">
+                            <li><a href="shop.html#onlineShop">婚禮花束</a></li>
+                            <li><a href="shop.html#onlineShop">贈禮花束</a></li>
+                            <li><a href="shop.html#onlineShop">居家裝飾</a></li>
+                        </ul>
+
+                        <button class="accordion">客製服務</button>
+                        <ul class="footer_panel custom">
+                            <li><a href="custom.html#steps">代客送花</a></li>
+                            <li><a href="custom.html#custom_full">全客製化</a></li>
+                            <li><a href="custom.html#custom_half">半客製化</a></li>
+                        </ul>
+
+                        <button class="accordion">常見問題</button>
+                        <ul class="footer_panel custom">
+                            <li><a href="faq.html#faq_q1">何為永生花</a></li>
+                            <li><a href="faq.html#faq_q2">運送包裝</a></li>
+                            <li><a href="faq.html#faq_q3">運費服務</a></li>
+                            <li><a href="faq.html#faq_q4">售後服務</a></li>
+                            <li><a href="faq.html#faq_q5">後續保養</a></li>
+                        </ul>
+
+                        <button class="accordion">客戶案例</button>
+                        <ul class="footer_panel custom">
+                            <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                            <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                            <li><a href="cases.html#case_in">居家類別</a></li>
+                        </ul>
+                        <button class="accordion">聯絡我們</button>
+                        <ul class="footer_panel about">
+                            <li><a href="contact.html#traffic_info">店鋪資訊</a></li>
+                            <li><a href="contact.html#content_info">聯絡表單</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer_icon">
+                        <ul>
+                            <li class="footer_icon_list">
+                                <a href="#" class="footer_icon_ig"></a>
+                            </li>
+                            <li class="footer_icon_list">
+                                <a href="#" class="footer_icon_line"></a>
+                            </li>
+                            <li class="footer_icon_list">
+                                <a href="#" class="footer_icon_fb"></a>
+                            </li>
+                            <li class="footer_icon_list">
+                                <a href="#" class="footer_icon_email"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-gotop d-inline-flex align-items-center justify-content-center"
+                data-action="gotop">
+            </button>
+        </footer>
+</body>
+</main>
+
+<!-- 客戶案例左右切換 -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>
+<!-- 側欄購物車bootstrap@5.3.0 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
+
+
+</html>

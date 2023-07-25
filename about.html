@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow" />
+    <title>《Re:BIRTH》永生花藝 - About Us</title>
+    <!-- 花藝師左右切換 -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'>
+    <!-- 側欄購物車bootstrap@5.3.0 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./about/about.css/style.css">
+</head>
+
+
+<body>
+    <header id="topbar">
+        <nav class="header">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="./image/icon.svg" alt="《Re：BIRTH》永生花藝">
+                </a>
+            </h1>
+
+
+            <!-- 普通列表 -->
+            <ul class="header_menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="custom.html">Custom</a></li>
+                <li><a href="cases.html">Cases</a></li>
+                <li><a href="faq.html">F&Q</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <!-- ICON -->
+            <div class="rwd_right">
+                <ul class="header_icon">
+                    <li class="list_item">
+                        <a href="#" class="icon_search"></a>
+                    </li>
+                    <li class="list_item">
+                        <a class="icon_cart" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                            aria-controls="offcanvasExample">
+                        </a>
+                    </li>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header" style="background-color: #FFFCF5;">
+                            <h5 class="offcanvas-title" id="offcanvasExampleLabel">購物車</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body" style="background-color: #FFFCF5;">
+                            <div>
+                                購物車內沒有商品
+                            </div>
+                            <div class="d-flex justify-content-center align-items-end mt-3" style="height: 82vh;">
+                                <button class="cartbtn btn-secondary" type="button" data-bs-toggle="dropdown">
+                                    立即結帳
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="list_item">
+                        <a href="#" onclick="customizeWindowEvent()" class="icon_sign_in"></a>
+                    </li>
+                </ul>
+
+                <!-- RWD列表 -->
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="about.html">About</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="custom.html">Custom</a>
+                        <a href="cases.html">Cases</a>
+                        <a href="faq.html">F&Q</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <span class="openbtn" onclick="openNav()"></span>
+            </div>
+        </nav>
+        <!-- 彈出式登入 -->
+        <div id="window-container" style="display: none;">
+            <div class="window-content">
+                <div class="login-page">
+                    <div class="form">
+                        <form class="register-form">
+                            <div class="close-button" onclick="closeForm()">×</div> <!-- 關閉按鈕 -->
+                            <h5>註冊會員</h5>
+                            <label>E-mail</label>
+                            <input type="text" placeholder="xxx@mail.com" />
+                            <label>連絡電話</label>
+                            <input type="tel" placeholder="09xx-xxx-xxx" />
+                            <label>密碼</label>
+                            <input type="password" placeholder="6-8位英數密碼" />
+                            <label>再次輸入密碼</label>
+                            <input type="password" placeholder="請再次輸入密碼" />
+                            <button>註冊</button>
+                            <p class="message"><a href="#">登入</a></p>
+                        </form>
+                        <form class="login-form">
+                            <div class="close-button" onclick="closeForm()">×</div> <!-- 關閉按鈕 -->
+                            <h5>會員登入</h5>
+                            <label>E-Mail / 電話</label>
+                            <input type="text" placeholder="請輸入E-Mail或電話" />
+                            <label>密碼</label>
+                            <input type="password" placeholder="請輸入密碼" />
+                            <button>登入</button>
+                            <p class="message">尚未加入會員? <a href="#">註冊</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About -->
+        <section id="about">
+            <div class="topbar_color"></div>
+            <div class="title_about">
+                <h2>
+                    <span class="en_title">About Us<span class="ch_title"> / 關於我們</span>
+                </h2>
+            </div>
+            <div class="about_banner">
+                <!-- <img src="./about/image/P1_img_banner.jpg" alt="關於我們"> -->
+            </div>
+            <div class="about_logo">
+                <img src="./about/image/P1_logo.svg" alt="Logo">
+            </div>
+            <div class="about_text">
+                <span class="big">浪漫</span>
+                <span class="medium">可以是</span>
+                <span class="big">奢</span>
+                <span class="small">侈</span>
+                <span class="medium">品</span><br>
+                <span class="medium">但</span>
+                <span class="big"> 心意</span>
+                <span class="medium">絕對是</span>
+                <span class="large">必需品</span>
+            </div>
+            <div class="about_img">
+                <div class="img_about img1">
+                    <img class="img_about_img1" src="./about/image/P1_img_about1.jpg"
+                        alt="坐落台北市住宅區，綻放於水泥叢林當中，讓灰白、忙碌的都市一隅增添色彩">
+                    <p class="img_about_p p1">
+                        坐落台北市住宅區<br>
+                        綻放於水泥叢林當中<br>
+                        讓灰白、忙碌的都市一隅增添色彩
+                    </p>
+                </div>
+                <div class="img_about img2">
+                    <img class="img_about_img2" src="./about/image/P1_img_about2.jpg" alt="致力於打造專屬於您的生活花禮">
+                    <p class="img_about_p p2">
+                        致力於打造專屬於您的生活花禮
+                    </p>
+                </div>
+                <div class="img_about img3">
+                    <img class="img_about_img3" src="./about/image/P1_img_about3.jpg"
+                        alt="讓時間凝固，讓美麗永存，定格最美模樣，由鮮花蛻變成為永生花">
+                    <p class="img_about_p p3">
+                        讓時間凝固<br>
+                        讓美麗永存<br>
+                        定格最美模樣<br>
+                        由鮮花蛻變成為永生花
+                    </p>
+                </div>
+            </div>
+
+            <!-- RWD -->
+            <div class="about_img_rwd1">
+                <div class="img_about_box">
+                    <div class="img_about img1">
+                        <img class="img_about_img1" src="./about/image/P1_img_about1.jpg"
+                            alt="坐落台北市住宅區，綻放於水泥叢林當中，讓灰白、忙碌的都市一隅增添色彩">
+                        <p class="img_about_p p1">
+                            坐落台北市住宅區<br>
+                            綻放於水泥叢林當中<br>
+                            讓灰白、忙碌的都市一隅增添色彩
+                        </p>
+                    </div>
+                    <div class="img_about img2">
+                        <img class="img_about_img2" src="./about/image/P1_img_about2.jpg" alt="致力於打造專屬於您的生活花禮">
+                        <p class="img_about_p p2">
+                            致力於打造專屬於您的生活花禮
+                        </p>
+                    </div>
+                </div>
+                <div class="img_about img3">
+                    <img class="img_about_img3" src="./about/image/P1_img_about3.jpg"
+                        alt="讓時間凝固，讓美麗永存，定格最美模樣，由鮮花蛻變成為永生花">
+                    <p class="img_about_p p3">
+                        讓時間凝固<br>
+                        讓美麗永存<br>
+                        定格最美模樣<br>
+                        由鮮花蛻變成為永生花
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <!-- Floral Design Team -->
+        <section id="team">
+            <div class="team_top">
+                <div class="team_bg_color"></div>
+                <div class="title_team">
+                    <h2>
+                        <span class="en_title">Floral<br>　Design<br>　　Team<span class="ch_title">/ 花藝師團隊</span>
+                    </h2>
+                    <h2 class="title_team_h2_rwd">
+                        <span class="en_title_team_rwd">Floral<br>Design<br>Team<span class="ch_title_team_rwd">/ 花藝師團隊</span>
+                    </h2>
+                    <p>－多年花藝經驗，只為給您最好－</p>
+                </div>
+            </div>
+            <div class="team_bottom">
+                <div class="team_main">
+                    <div class="slider slider-nav">
+                        <div class="slider_figure">
+                            <figure class="main_figure">
+                                <img src="./about/image/P2-img-team1.jpg" alt="Alice店長">
+                                <figcaption>
+                                    <div class="team_info">
+                                        <span class="team_name">Alice</span>
+                                        <span class="team_position">店長</span>
+                                    </div>
+                                    <span class="team_feature">
+                                        證照：AFA高級、AAFF高級<br>
+                                        擅長：婚禮捧花、客製商品
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="slider_figure">
+                            <figure class="main_figure">
+                                <img src="./about/image/Cross.jpg" alt="Lily副店長">
+                                <figcaption>
+                                    <div class="team_info">
+                                        <span class="team_name">Lily</span>
+                                        <span class="team_position">副店長</span>
+                                    </div>
+                                    <span class="team_feature">
+                                        證照：AFA高級、AAFF中級<br>
+                                        擅長：韓式花藝、居家擺設
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="slider_figure">
+                            <figure class="main_figure">
+                                <img src="./about/image/P2-img-team3.jpg" alt="Zoe店員">
+                                <figcaption>
+                                    <div class="team_info">
+                                        <span class="team_name">Zoe</span>
+                                    </div>
+                                    <span class="team_feature">
+                                        證照：AFA中級、AAFF中級<br>
+                                        擅長：特色包裝、客製商品
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="slider_figure">
+                            <figure class="main_figure">
+                                <img src="./about/image/P2-img-team4.jpg" alt="Daisy店員">
+                                <figcaption>
+                                    <div class="team_info">
+                                        <span class="team_name">Daisy</span>
+                                    </div>
+                                    <span class="team_feature">
+                                        證照：AFA中級、AAFF初級<br>
+                                        擅長：跳色搭配、婚禮花束
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="slider_figure">
+                            <figure class="main_figure">
+                                <img src="./about/image/P2-img-team5.jpg" alt="Mia店員">
+                                <figcaption>
+                                    <div class="team_info">
+                                        <span class="team_name">Mia</span>
+                                    </div>
+                                    <span class="team_feature">
+                                        證照：AFA中級、AAFF初級<br>
+                                        擅長：贈禮花束、節日花禮
+                                    </span>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Flower Meaning -->
+        <section id="flowerMean">
+            <div class="bg_color"></div>
+            <div class="title_flowerMean">
+                <h2>
+                    <span class="en_title">Flower Meaning<span class="ch_title"> / 花語介紹</span>
+                </h2>
+                <h2>
+                    <span class="en_title_flowerMean">Flower Meaning</span>
+                    <span class="ch_title_flowerMean">花語介紹</span>
+                </h2>
+            </div>
+            <div class="list_box_mean_wrapper">
+                <div class="list_box_mean">
+                    <div class="mean_card mean1">
+                        <div class="mean_card_img">
+                            <img src="./about/image/P3-img-mean1.jpg" alt="">
+                            <div class="mean_card_overlay">
+                                <div class="mean_card_text">
+                                    <p>
+                                        紅口水仙的花語是「自尊」和「自愛」。
+                                        也代表了自我關懷和愛護自己的精神。在花語中，紅口水仙也代表了人生中自我成長和內在美的重要性。它提醒我們要珍視自己，相信自己的價值和能力，並且不要因為外界的評價或看法而動搖自己的內心。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mean_card_tittle">
+                            <p>紅口水仙花</p>
+                        </div>
+                    </div>
+                    <div class="mean_card mean1">
+                        <div class="mean_card_img">
+                            <img src="./about/image/P3-img-mean2.jpg" alt="">
+                            <div class="mean_card_overlay">
+                                <div class="mean_card_text">
+                                    <p>
+                                        陸蓮花的花語是「高雅」。
+                                        陸蓮花以它的花姿和花香散發出一種高雅的氛圍，給人一種溫柔優雅的感覺。它象徵著品味和典雅，提醒我們在生活中追求高尚的價值和獨特的風格。陸蓮花的存在讓人感到舒適和寧靜，它帶來平和與和諧的氛圍，也是一種對美的追求和欣賞。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mean_card_tittle">
+                            <p>陸蓮花</p>
+                        </div>
+                    </div>
+                    <div class="mean_card mean1">
+                        <div class="mean_card_img">
+                            <img src="./about/image/P3-img-mean3.jpg" alt="">
+                            <div class="mean_card_overlay">
+                                <div class="mean_card_text">
+                                    <p>
+                                        白玉蘭花的花語是「純潔」。
+                                        它散發著淡雅的花香，給人一種清新純潔的感覺。白玉蘭花提醒我們保持內心的純潔和善良，尋求心靈的平靜和寧靜。它也象徵著對美的追求和對生活的熱愛，呈現出一種優雅和高尚的氛圍。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mean_card_tittle">
+                            <p>白玉蘭花</p>
+                        </div>
+                    </div>
+                    <div class="mean_card mean1">
+                        <div class="mean_card_img">
+                            <img src="./about/image/P3-img-mean4.jpg" alt="">
+                            <div class="mean_card_overlay">
+                                <div class="mean_card_text">
+                                    <p>
+                                        黃小蒼蘭的花語是「幸福」。
+                                        它以它鮮豔的黃色花朵傳達著活力和陽光的意義。黃小蒼蘭的花香讓人感到愉悅和開心，它提醒我們要珍惜每一刻，追求自己心中的幸福。這朵花傳達著樂觀和積極的態度，給人一種希望和溫暖的感覺。它是一種對生命的讚美和對幸福的追求。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mean_card_tittle">
+                            <p>黃小蒼蘭</p>
+                        </div>
+                    </div>
+                    <div class="mean_card mean1">
+                        <div class="mean_card_img">
+                            <img src="./about/image/P3-img-mean5.jpg" alt="">
+                            <div class="mean_card_overlay">
+                                <div class="mean_card_text">
+                                    <p>
+                                        山楂花的花語是「純真」。
+                                        它以它純白的花朵和溫柔的花香展現出純真的氛圍。山楂花的存在讓人感到安心和寧靜，它提醒我們要保持內心的純真和善良，用真誠對待他人和生活。這朵花傳達著對純潔和真實價值的追求，給人一種純淨和純粹的感覺。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mean_card_tittle">
+                            <p>山楂花</p>
+                        </div>
+                    </div>
+                    <div class="mean_card mean1">
+                        <div class="mean_card_img">
+                            <img src="./about/image/P3-img-mean6.jpg" alt="">
+                            <div class="mean_card_overlay">
+                                <div class="mean_card_text">
+                                    <p>
+                                        白菊花的花語是「純潔」和「純真」。
+                                        它雪白的花朵散發出一種清新和純淨的感覺，給人一種平靜和舒適的氛圍。它象徵著對內在美的追求和對真實價值的重視。白菊花提醒我們要保持純潔的心靈和真誠的態度，以真摯的愛和善良的行為對待他人。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mean_card_tittle">
+                            <p>白菊花</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <footer id="footer">
+        <div class="footer_all">
+            <div class="footer_left">
+                <h1 class="footer_logo">
+                    <a href="index.html">
+                        <img src="./image/icon.svg" alt="《Re：BIRTH》永生花藝">
+                    </a>
+                </h1>
+                <div class="footer_address">
+                    <p>
+                        02-000-0000<br>
+                        台北市花花區玫瑰路一段321號<br>
+                        營業時間：<br>
+                        周一至周六 ：9:00 am 至 18:00 pm<br>
+                        周日公休，詳情見官方粉絲團
+                    </p>
+                </div>
+            </div>
+            <div class="footer_copyright">
+                © 2020 - 2023 Re:BIRTH. All Rights Reserved.<br>
+                本網站為練習作品。此為非正式官方網站，資訊均非正式內容。若網站中有表單填寫，僅此示意，並無任何後台功能，不會對外蒐集個人資料，特此申明。
+        </div>
+            <div class="footer_right">
+                <div class="footer_list">
+                    <ul class="footer_about">
+                        <li class="footer_li_item"><a href="about.html">關於我們</a></li>
+                        <li><a href="about.html#team">花藝團隊</a></li>
+                        <li><a href="about.html#flowerMean">花語介紹</a></li>
+                    </ul>
+                    <ul class="footer_shop">
+                        <li class="footer_li_item"><a href="shop.html">線上商店</a></li>
+                        <li><a href="shop.html#onlineShop">婚禮花束</a></li>
+                        <li><a href="shop.html#onlineShop">贈禮花束</a></li>
+                        <li><a href="shop.html#onlineShop">居家裝飾</a></li>
+                    </ul>
+                    <ul class="footer_custom">
+                        <li class="footer_li_item"><a href="custom.html">客製專區</a></li>
+                        <li><a href="custom.html#steps">代客送花</a></li>
+                        <li><a href="custom.html#custom_full">全客製化</a></li>
+                        <li><a href="custom.html#custom_half">半客製化</a></li>
+                    </ul>
+                    <ul class="footer_faq">
+                        <li class="footer_li_item"><a href="faq.html">常見問題</a></li>
+                        <li><a href="faq.html#faq_q1">何為永生花</a></li>
+                        <li><a href="faq.html#faq_q2">運送包裝</a></li>
+                        <li><a href="faq.html#faq_q3">運費服務</a></li>
+                        <li><a href="faq.html#faq_q4">售後服務</a></li>
+                        <li><a href="faq.html#faq_q5">後續保養</a></li>
+                    </ul>
+                    <ul class="footer_cases">
+                        <li class="footer_li_item"><a href="cases.html">客戶案例</a></li>
+                        <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                        <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                        <li><a href="cases.html#case_in">居家類別</a></li>
+                    </ul>
+                    <ul class="footer_contact">
+                        <li class="footer_li_item"><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="contact.html#traffic_info">店鋪資訊</a></li>
+                        <li><a href="contact.html#content_info">聯絡表單</a></li>
+                    </ul>
+                </div>
+                <!-- RWD -->
+                <div class="rwd_footer_list">
+                    <button class="accordion">關於我們</button>
+                    <ul class="footer_panel about">
+                        <li><a href="about.html#team">花藝團隊</a></li>
+                        <li><a href="about.html#flowerMean">花語介紹</a></li>
+                    </ul>
+
+                    <button class="accordion">線上商店</button>
+                    <ul class="footer_panel shop">
+                        <li><a href="shop.html#onlineShop">婚禮花束</a></li>
+                        <li><a href="shop.html#onlineShop">贈禮花束</a></li>
+                        <li><a href="shop.html#onlineShop">居家裝飾</a></li>
+                    </ul>
+
+                    <button class="accordion">客製服務</button>
+                    <ul class="footer_panel custom">
+                        <li><a href="custom.html#steps">代客送花</a></li>
+                        <li><a href="custom.html#custom_full">全客製化</a></li>
+                        <li><a href="custom.html#custom_half">半客製化</a></li>
+                    </ul>
+
+                    <button class="accordion">常見問題</button>
+                    <ul class="footer_panel custom">
+                        <li><a href="faq.html#faq_q1">何為永生花</a></li>
+                        <li><a href="faq.html#faq_q2">運送包裝</a></li>
+                        <li><a href="faq.html#faq_q3">運費服務</a></li>
+                        <li><a href="faq.html#faq_q4">售後服務</a></li>
+                        <li><a href="faq.html#faq_q5">後續保養</a></li>
+                    </ul>
+
+                    <button class="accordion">客戶案例</button>
+                    <ul class="footer_panel custom">
+                        <li><a href="cases.html#case_gift">贈禮類別</a></li>
+                        <li><a href="cases.html#case_wed">婚禮類別</a></li>
+                        <li><a href="cases.html#case_in">居家類別</a></li>
+                    </ul>
+                    <button class="accordion">聯絡我們</button>
+                    <ul class="footer_panel about">
+                        <li><a href="contact.html#traffic_info">店鋪資訊</a></li>
+                        <li><a href="contact.html#content_info">聯絡表單</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_icon">
+                    <ul>
+                        <li class="footer_icon_list">
+                            <a href="#" class="footer_icon_ig"></a>
+                        </li>
+                        <li class="footer_icon_list">
+                            <a href="#" class="footer_icon_line"></a>
+                        </li>
+                        <li class="footer_icon_list">
+                            <a href="#" class="footer_icon_fb"></a>
+                        </li>
+                        <li class="footer_icon_list">
+                            <a href="#" class="footer_icon_email"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-gotop d-inline-flex align-items-center justify-content-center"
+            data-action="gotop">
+        </button>
+    </footer>
+    <!-- 花藝師左右切換 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js'></script>
+    <!-- 側欄購物車bootstrap@5.3.0 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="./about/about.js/script.js"></script>
+</body>
+
+</html>
