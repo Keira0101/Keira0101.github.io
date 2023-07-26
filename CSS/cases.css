@@ -106,7 +106,7 @@
   .content {
     width: 80%;
     margin: auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   @media (max-width: 1024px) {
