@@ -1,8 +1,14 @@
 # ReBirth-永生花購物網站- [Demo](https://keira0101.github.io/ReBirth/)
->A Html,JS,CSS web for front-end practice works, without any commercial use.
+>A HTML,CSS, JS web for front-end practice works, without any commercial use.
 
 ![logo](https://upload.cc/i1/2023/08/02/YloWHS.png)
 
+## 使用技術
+* HTML
+* CSS
+* JavaScript
+* jQuery
+* Bootstrap
 
 ## 簡介
 **開發動機:**  
@@ -54,7 +60,47 @@
 
 ![about](https://upload.cc/i1/2023/08/02/Q84Cj0.png)
 
-##客製化
-包含代客送花、全客製化、半客製化等項目，使用者可直接在此頁面填寫全客製、半客製化表單。
+## 商品頁面
+點擊上方按鈕進行類別篩選，並使用滑桿調整價格。左側亦有搜尋欄位，包含篩選價格、顏色、花種等功能。
+
+![img](https://upload.cc/i1/2023/08/03/WmgVcI.png)
+
+![img](https://upload.cc/i1/2023/08/03/HG7usK.png)
+
+## 商品詳情頁
+商品詳情頁面將標明花種、尺寸、價格、花藝設計概念、適合送禮對象、可加購項目等資訊，協助使用者挑選商品。
+![img](https://upload.cc/i1/2023/08/03/O0vDNJ.png)
+
+## 客製化
+包含代客送花、全客製化、半客製化等項目，使用者可直接在此頁面填寫全客製、半客製化表單。  
+
+* 半客製化:可以依勾選的選項即時預覽
+
+![img](https://upload.cc/i1/2023/08/03/PSWzo0.png)
+
 ![custom](https://upload.cc/i1/2023/08/02/PxMLAW.png)
+
+## 客戶案例
+客戶案例頁面分為送禮花束、婚禮花束、居家擺設三類，下方會標註其花種、尺寸及客戶評論，左右點選可切換。
+![img](https://upload.cc/i1/2023/08/03/BGytxm.png)
+
+## F&Q常見問題
+F&Q頁面列出常見問題，讓使用者更了解永生花及其照顧方式、運送資訊等。
+![img](https://upload.cc/i1/2023/08/03/zjcHvD.png)
+
+## 註冊、登入頁面
+點選註冊可切換為註冊頁面  
+![img](https://upload.cc/i1/2023/08/03/8hPVUO.png)
+![img](https://upload.cc/i1/2023/08/03/8Xo9Qu.png)
+
+
+
+
+
+
+
+
+
+
+
 
